@@ -6,9 +6,9 @@ let age =21
 let isLoggedIn =false
 
 // DATATYPES
-//null  standalone value 
-//number ,Bigint,boolean,string
-//undefined  ( value is not assigned)
+//null  standalone value and both datatypes 
+//number ,Bigint,boolean,string 
+//undefined  ( value is not assigned) 
 // Symbol // uniqueness of components(will use later)
 //Non primitive ( Object)
 
