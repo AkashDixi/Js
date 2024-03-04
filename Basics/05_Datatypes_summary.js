@@ -24,3 +24,21 @@ console.log(typeof myfunc)
 console.log(typeof null)
 
 // All refernce type has type as object function has funcobject
+
+//////////////////////////////////////////////MEMORY IN JS ////////////////////////////////////
+// STACK(PRIMITIVE ORG COPY  )   HEAP(NON PRIMIITIVE  REFERENCE)
+let my = "Akash"
+let ay =my  // copy ofvalue of my is share  any change iin this copy will not change 
+console.log(ay);
+
+let user1=
+{email :"ak@gmail.com",
+upi :"okdi"
+
+}
+let user2= user1  // same reference of value of user1 no copy
+console.log(user1);
+user2.email="ckdk@gmail.com"
+console.log(user1);
+console.log(user2);
+
