@@ -9,7 +9,7 @@ let isLoggedIn =false
 //null  standalone value and both datatypes 
 //number ,Bigint,boolean,string 
 //undefined  ( value is not assigned) 
-// Symbol // uniqueness of components(will use later)
+// Symbol // uniqueness of components in react(will use later)
 //Non primitive ( Object)
 
 console.log(typeof null); //object 
