@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM EDITING</title>
+</head>
+<body style="background-color: black ;color: aliceblue;">
+    <ul class="lang">
+        <li>javascript</li>
+    </ul>
+    
+</body>
+<script>
+    function addlan(langName){
+        const li =document.createElement('li')
+        li.innerHTML=`${langName}`
+        document.querySelector('.lang').appendChild(li)
+    }
+        function addoptilan(langName){
+        const li =document.createElement('li')
+     
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.lang').appendChild(li)
+        }
+    
+    addlan("Python")
+    addlan("Typescript") 
+    addoptilan("go")
+
+    //editing of element
+    const secondlang=document.querySelector("li:nth-child(2)")
+    const newli=document.createElement('li')
+    newli.textContent ="mojo";
+    secondlang.replaceWith(newli)
+  //editing
+    const first=document.querySelector("li:first-child")
+    first.outerHTML='<li>Ts</li>'
+
+    //remove
+    const last=document.querySelector('li:nth-child(3)')
+    last.remove()
+
+
+
+</script>
+</html>
