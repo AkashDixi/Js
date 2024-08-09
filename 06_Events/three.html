@@ -11,12 +11,13 @@
     <button id="stop">STOP</button>
 </body>
 <script>
+    let stopit
     const saydate =function(str)
     {
         console.log(str,'Akash',Date.now())
     }
     const seTID=function(){
-       setInterval(saydate,2000,"Hi")
+      stopit= setInterval(saydate,2000,"Hi")
 
     }
     document.querySelector('#start').addEventListener('click',seTID)
