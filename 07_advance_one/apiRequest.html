@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black ;color: aliceblue;">
+   <br> Value	State	Description<br><br>
+0	UNSENT	Client has been created. open() not called yet.<br>
+1	OPENED	open() has been called.<br>
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.<br>
+3	LOADING	Downloading; responseText holds partial data.<br>
+4	DONE	The operation is complete.
+<br>
+<button id="get">Click here</button>
+<div style="height: 30vh;width: 30vw;background-color: blueviolet ;">
+    
+</div>
+
+<!---console.log is not part of core js its a debugging tool and its browser dev tool
+it is injected by js runtime its present in v8 engine one of the engine that run js---->
+    
+</body>
+<script>
+    const requesturl="https://api.github.com/users/hiteshchoudhary"
+  
+//    xhr.onreadystatechange=function()
+//    {
+//     console.log(xhr.readyState);
+//     if(xhr.readyState==4)
+
+//    {
+//     const data=JSON.parse(this.responseText)
+//     console.log(typeof data);
+//     console.log(data.followers);
+    
+//     //MOST OF THE TIME YOU GET RESPONSE FROM URL ITS IN FORMOF STRING
+//    }
+//    }
+ 
+                ///  ACTIVITY (TASK)
+ 
+   document.body.querySelector('#get').addEventListener('click',function()
+{    const xhr= new XMLHttpRequest()
+    xhr.open('GET',requesturl)
+    xhr.send()
+    
+    xhr.onreadystatechange=function()
+    {
+   
+    if(xhr.readyState==4)
+
+{   console.log('hi')
+    const data =JSON.parse(this.responseText)
+   
+    document.querySelector('div').innerHTML=`<img src=${data.avatar_url} width ="70px"nheight ="70px" >
+    <br>
+    <p> Followers :${data.followers}</p>
+    `
+    
+}
+ 
+    }
+    
+})
+</script>
+</html>
